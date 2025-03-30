@@ -4,12 +4,38 @@ import random
 
 # Function to dynamically generate combat responses based on attack type
 def generate_retaliation(attack_type):
+    # Elements of the retaliation (actions, effects, and powerups)
+    attack_actions = [
+        "phases across the multiverse to counter your attack",
+        "summons energy from a trillion dimensions to obliterate you",
+        "collapses the fabric of time itself with a single thought",
+        "unleashes a cosmic burst that splits reality in half",
+        "flicks a finger and distorts the fundamental laws of physics"
+    ]
+    
+    attack_effects = [
+        "causing the collapse of countless universes",
+        "leaving entire realities trembling in fear",
+        "creating a singularity that devours everything in its path",
+        "shattering the very essence of existence itself",
+        "ripping through the boundaries of spacetime with each strike"
+    ]
+    
+    attack_intensities = [
+        "with a force that reverberates across countless dimensions",
+        "so powerful that it warps the nature of reality itself",
+        "with an intensity that obliterates entire timelines",
+        "so swift that time itself struggles to keep up",
+        "that creates a shockwave across infinite universes"
+    ]
+    
+    # Map attacks to specific retaliation actions
     attack_responses = {
-        "punching": "You think your punch can harm me? I'll counter with a barrage of lightning-fast strikes!",
-        "slamming": "Slamming me? How about I teleport behind you and land a crushing blow that breaks the ground!",
-        "kicking": "Your kick is no match for my reflexes! I'll dodge and strike you with a devastating combo!",
-        "throwing": "Throwing me? That's a mistake! I'll phase through and land a powerful energy blast right at you!",
-        "attacking": "Such a feeble attack! I respond with a ground-shaking energy wave that will leave you stunned!"
+        "punching": f"You dare punch me? {random.choice(attack_actions)} {random.choice(attack_effects)} {random.choice(attack_intensities)}!",
+        "slamming": f"You slam me into the void? {random.choice(attack_actions)} {random.choice(attack_effects)} {random.choice(attack_intensities)}!",
+        "kicking": f"You think your kick can hurt me? {random.choice(attack_actions)} {random.choice(attack_effects)} {random.choice(attack_intensities)}!",
+        "throwing": f"You throw me? You just sealed your own fate! {random.choice(attack_actions)} {random.choice(attack_effects)} {random.choice(attack_intensities)}!",
+        "attacking": f"Your attack is futile! I transcend your feeble attempt with a counter so powerful that {random.choice(attack_effects)} {random.choice(attack_intensities)}!"
     }
 
     # If the attack type is recognized, generate the response
@@ -17,7 +43,7 @@ def generate_retaliation(attack_type):
         return attack_responses[attack_type]
     
     # If attack type is unknown, return a generic response
-    return f"You're attacking me? You won't get away with that! Prepare for my retaliation!"
+    return f"You dare attack me? I will end you across all planes of existence. Prepare for your annihilation!"
 
 # Function to simulate typing at 350 WPM (around 0.17 seconds per character)
 def type_text_at_350_wpm(text):
